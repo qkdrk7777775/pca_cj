@@ -2,6 +2,9 @@
 
 ## package example1
 
+cor pca use iris data
+
+```
 from sklearn.datasets import load_iris
 import pandas as pd
 df= load_iris()
@@ -40,10 +43,11 @@ ax.grid()
 a=PCA(X[1:50],cor=False,cov_scaling=False)
 #prediction
 pred=(X[51:,:]-a[1]).dot(a[3])
-
+```
 
 ## package example2
 
+```
 #sklearn kernel PCA method but scale is diffrence
 
 X, y = make_moons(n_samples=100, random_state=123)
@@ -60,4 +64,4 @@ plt.tight_layout()
 plt.show()
 
  
-
+```
