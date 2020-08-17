@@ -16,7 +16,7 @@ def PCA(X,cor=True,cov_scaling=True,center=True):
         if cor:
             mat=np.corrcoef(X.T)
         elif cov_scaling:
-            def standardization(x):
+            def standardization(X):
                 std=np.apply_along_axis(np.std,0,X)
                 mean=np.apply_along_axis(np.mean,0,X)
                 z=(X-mean)/std
